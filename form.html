@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script type="text/javascript">
+  function validation() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name can't be empty");
+    return false;
+  }
+  var x = document.forms["myForm"]["email"].value;
+    if(x==""){
+        alert("Enter a valid email address.");
+        return false;
+    }
+    var x = document.forms["myForm"]["cardname"].value;
+    if(x==""){
+        alert("Card Name can't be empty")
+        return false;
+    }   
+    var x = document.forms["myForm"]["add1"].value;
+    if(x==""){
+        alert("Address can't be empty")
+        return false;
+    }     
+    var x = document.forms["myForm"]["city"].value;
+    if(x==""){
+        alert("City Name can't be empty")
+        return false;
+    }    
+    var x = document.forms["myForm"]["zipcode"].value;
+    if(x==""){
+        alert("Zip-Code can't be empty")
+        return false;
+    }    
+    var x = document.forms["myForm"]["cardno"].value;
+    if(x=""){
+        alert("Choose a Valid Card Number of 16 digits")
+        return false;
+    }
+    var x = document.forms["myForm"]["cvv"].value;
+    if(x==""){
+        alert("Please enter a valid CVV number of 3 digits")
+        return false;
+    }  
+}
+    </script>
+    <style>
+        body
+        {
+            background-image: url("Slide1.JPG");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 70px;">Payment Gateway </h1>
+      <form name = "myForm" onsubmit = "return validation();">
+        <table cellspacing ="3" cellpadding = "3" border = "2" style="border-style: dotted;">
+            <h1>1. Full Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="fname" style="font-size: 25px;" placeholder="Your Full Name"> </h1>
+            <h1>2. Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="email" style="font-size: 25px;" placeholder="mail@example.com"> </h1>
+            <h1>3. Name on Card: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cardname" style="font-size: 25px;" placeholder="Name on your Card"> </h1> 
+            <h1>4. Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="add1" style="font-size: 25px;" placeholder="Your Address"> </h1>  
+            <h1>5. City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="city" style="font-size: 25px;" placeholder="Your City"> </h1>
+            <h1>6. Zip Code: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="zipcode" style="font-size: 25px;" placeholder="Your Postal/Zip Code"> </h1>
+            <h1>7. State/Province: &nbsp;&nbsp;&nbsp;&nbsp;<select style="font-size: 25px;" name="state" placeholder="Your State">
+            <option>---Select your State/Province---</option>
+            <option>Maharashtra</option>    
+            <option>Gujarat</option>
+            <option>Goa</option>
+            <option>Rajasthan</option>
+            <option>Karnataka</option>
+            <option>Kerela</option></select></h1>
+            <h1>8. Card Number: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="cardno" style="font-size: 25px;" placeholder="1234-1234-1234-1234"> </h1>
+            <h1>9. Expiry Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="month" style="font-size: 25px;"> </h1>
+            <h1>10. CVV: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" style="font-size: 25px;" name="cvv" placeholder="123"> </h1>
+            <input type="submit" value="Submit" style="font-size: 25px;"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Reset" style="font-size: 25px;">
+    </form>
+    </table>
+</body>
+</html>
